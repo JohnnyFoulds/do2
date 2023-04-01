@@ -6,6 +6,18 @@ $(document).ready(function () {
         const kg = 75;
         const do2 = co * (hb * 1.34 * sao2) * 10;
         $("#do2-val").text(do2.toFixed(2));
+
+        // Update the DO2 bar height
+        const maxHeight = 984.90; // Set the max DO2 value you want to consider for 100% height
+        const do2BarHeightPercentage = Math.min((do2 / maxHeight) * 100, 100);
+        $("#do2-bar").css("height", do2BarHeightPercentage + "%");
+
+        // Change the color of the progress bar to red if do2 <= 398
+        if (do2 <= 398) {
+            $("#do2-bar").addClass("progress-bar-red");
+        } else {
+            $("#do2-bar").removeClass("progress-bar-red");
+        }        
     }
 
     $("#co-slider").slider({

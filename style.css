@@ -29,10 +29,7 @@ th, td {
 th {
     background-color: #f2f2f2;
     font-weight: bold;
-}
-
-table th:nth-child(n+2) {
-    width: 20%;
+    width: 25%;
 }
 
 #co-slider,
@@ -51,5 +48,30 @@ table th:nth-child(n+2) {
 #hb-slider,
 #sao2-slider {
     height: 200px;
+    margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.progress-bar-container {
+    position: relative;
+    left: 50%;
+    width: 20px;
+    height: 200px; /* Same height as the sliders */
+    /* margin-top: 5px; */
+    border: 1px solid #ccc;
+}
+
+.progress-bar {
+    position: absolute;
+    background-color: #4caf50;
+    width: 100%;
+    bottom: 0;
+}
+
+#do2-bar {
+    max-height: 100%;
+}
+
+.progress-bar-red {
+    background-color: red;
 }
